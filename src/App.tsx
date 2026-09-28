@@ -11,6 +11,18 @@ function App() {
 
   console.log(pokemon);
 
-  return <div>포켓몬 도감</div>;
+  return (
+    <div>
+      <h1>포켓몬 도감</h1>
+      {pokemon ? (
+        <div>
+          <img src={pokemon.sprites.front_default} alt={pokemon.name} />
+          <p>{pokemon.name}</p>
+        </div>
+      ) : (
+        <p>불러오는 중 ... </p>
+      )}
+    </div>
+  );
 }
 export default App;
